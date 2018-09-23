@@ -1,0 +1,5 @@
+/* pages/account/account.wxss */
+.user-img{
+  background-color: #fff;
+  height: 100px;
+}

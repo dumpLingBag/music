@@ -1,0 +1,15 @@
+<view class='user-img'>
+  <i-row>
+    <i-col span="8" i-class="col-class">
+      <i-avatar src="/img/find.png" size="large" shape="square"></i-avatar>
+    </i-col>
+    <i-col span="12" i-class="col-class">666
+      <view>获取用户头像</view>
+    </i-col>
+    <i-col span="4" i-class="col-class">
+      <view>
+        签到
+      </view>
+    </i-col>
+  </i-row>
+</view>
