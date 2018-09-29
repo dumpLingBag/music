@@ -1,4 +1,5 @@
 //app.js
+const isLogin = require('./common/login.js');
 App({
   onLaunch: function () {
     // 展示本地存储能力
@@ -6,13 +7,16 @@ App({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
     
-    // 登录
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        console.log(res)
+    wx.checkSession({
+      success: function (res) {
+        // 已登陆
+      },
+      fail: function (res) {
+        // 登陆失效，重新登陆
+        isLogin.login();
       }
     })
+
     // 获取用户信息
     wx.getSetting({
       success: res => {
@@ -33,6 +37,10 @@ App({
         }
       }
     })
+  },
+  getUserInfo: function () {
+    var _this = this;
+    console.log('111');
   },
   globalData: {
     userInfo: null

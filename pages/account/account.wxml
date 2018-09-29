@@ -1,15 +1,79 @@
-<view class='user-img'>
-  <i-row>
-    <i-col span="8" i-class="col-class">
-      <i-avatar src="/img/find.png" size="large" shape="square"></i-avatar>
-    </i-col>
-    <i-col span="12" i-class="col-class">666
-      <view>获取用户头像</view>
-    </i-col>
-    <i-col span="4" i-class="col-class">
-      <view>
-        签到
-      </view>
-    </i-col>
-  </i-row>
+<view class='user-info'>
+  <view class='user-img'>
+    <image src='/img/user-all.png' wx:if="{{!hasUserInfo && canIUse}}" class='userinfo-avatar' mode='cover'></image>
+    <block wx:else>
+      <image src='{{userInfo.avatarUrl}}' class='userinfo-avatar' mode='cover'></image>
+    </block>
+  </view>
+  <view class='user-name'>
+    <button class='lv-btn' wx:if="{{!hasUserInfo && canIUse}}" hover-class='none' open-type='getUserInfo' bindgetuserinfo='getUserInfo'>显示头像</button>
+    <block wx:else>
+      <button class='lv-btn' hover-class='none'>{{userInfo.nickName}}</button>
+    </block>
+  </view>
+  <view class='user-index'>
+    <view>
+      <i-icon type="interactive_fill" size="24" color="#80848f" />
+      <text class='icon-text'>消息盒子</text>
+    </view>
+    <view>
+      <i-icon type="service_fill" size="24" color="#80848f" />
+      <text class='icon-text'>积分兑换</text>
+    </view>
+    <view>
+      <i-icon type="group_fill" size="24" color="#80848f" />
+      <text class='icon-text'>粉丝中心</text>
+    </view>
+    <view>
+      <i-icon type="integral_fill" size="24" color="#80848f" />
+      <text class='icon-text'>会员中心</text>
+    </view>
+  </view>
+  <view class='user-sign' bindtap='sign'>
+    <i-icon type="remind_fill" size="18" color="rgba(0,0,0,.5)" />
+    <text>签到</text>
+  </view>
+</view>
+<view class='user-list'>
+  <i-cell-group>
+    <i-cell title="商城" is-link url="/pages/dashboard/index" only-tap-footer>
+      <i-icon type="commodity" size="20" color="#818085" slot="icon" />
+    </i-cell>
+    <i-cell title="扫一扫" is-link url="/pages/dashboard/index">
+      <i-icon type="scan" size="20" color="#818085" slot="icon" />
+    </i-cell>
+    <i-cell title="蜂窝网络播放">
+    <i-icon type="flashlight" size="20" color="#818085" slot="icon" />
+      <i-switch value="{{ switch1 }}" size="small" bind:change="onChange" slot="footer">
+        <i-icon type="right" slot="open"></i-icon>
+        <i-icon type="close" slot="close"></i-icon>
+      </i-switch>
+    </i-cell>
+    <i-cell title="优惠券" is-link url="/pages/dashboard/index" only-tap-footer>
+      <i-icon type="coupons" size="20" color="#818085" slot="icon" />
+    </i-cell>
+    <i-cell title="我的客服" is-link>
+      <i-icon type="customerservice" size="20" color="#818085" slot="icon" />
+    </i-cell>
+  </i-cell-group> 
+</view>
+<view class='user-list'>
+  <i-cell-group>
+    <i-cell title="分享饺子包音乐" is-link>
+      <i-icon type="share" size="20" color="#818085" slot="icon" />
+    </i-cell>
+    <i-cell title="关于" is-link>
+      <i-icon type="prompt" size="20" color="#818085" slot="icon" />
+    </i-cell>
+  </i-cell-group>
+</view>
+<!-- 提示类 -->
+<view>
+  <i-modal title="提示" visible="{{ visible3 }}" actions="{{ actions3 }}" bind:click="handleClick3">
+    <view>{{text3}}</view>
+  </i-modal>
+  <i-message id="message" />
+</view>
+<view>
+  <i-toast id="toast" />
 </view>

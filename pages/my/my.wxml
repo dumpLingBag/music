@@ -1,2 +1,17 @@
 <!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<view class='user-list'>
+  <i-cell-group>
+    <i-cell title="商城" is-link url="/pages/dashboard/index" only-tap-footer>
+      <i-icon type="commodity" size="20" color="#818085" slot="icon" />
+    </i-cell>
+    <i-cell title="扫一扫" is-link url="/pages/dashboard/index">
+      <i-icon type="scan" size="20" color="#818085" slot="icon" />
+    </i-cell>
+    <i-cell title="优惠券" is-link url="/pages/dashboard/index" only-tap-footer>
+      <i-icon type="coupons" size="20" color="#818085" slot="icon" />
+    </i-cell>
+    <i-cell title="我的客服" is-link>
+      <i-icon type="customerservice" size="20" color="#818085" slot="icon" />
+    </i-cell>
+  </i-cell-group> 
+</view>

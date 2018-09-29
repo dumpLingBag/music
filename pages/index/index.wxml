@@ -1,13 +1,18 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+<view class='index-music'>
+  <view class='index-search'>
+    <i-icon type="search" size="18" style='float:left;line-height:28px;margin-left:10px;' i-class='index-icon' color="#80848f" />
+    <input type='text' class='index-input' disabled='true' bindtap='search' bindfocus='bindfocus' bindinput='bindinput' placeholder='请输入歌曲名、歌手名或者类型...'></input>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+  <view class="page-section page-section-spacing swiper">
+      <swiper class='swiper-box' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}" style='height:100px;' duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
+        <block wx:for="{{background}}" wx:key="*this">
+          <swiper-item>
+            <navigator url='{{item.linkUrl}}'>
+              <view class="swiper-item slide-image" style='border-radius:4px;background:url("../../img/swiper/{{item.img}}") no-repeat'></view>
+            </navigator>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
 </view>

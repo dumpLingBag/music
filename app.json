@@ -1,7 +1,7 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs",
+    "pages/search/search",
     "pages/account/account",
     "pages/my/my"
   ],
@@ -10,7 +10,7 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "",
     "navigationBarTextStyle":"black",
-    "backgroundColor": "#f8f8f8"
+    "backgroundColor": "#fff"
   },
   "tabBar": {
     "list": [
@@ -34,6 +34,6 @@
       }
     ],
     "backgroundColor": "#fff",
-    "selectedColor": "#d81e06"
+    "selectedColor": "#d33d33"
   }
 }

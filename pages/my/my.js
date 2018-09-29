@@ -1,5 +1,5 @@
 // pages/my/my.js
-const app = getApp()
+const app = getApp();
 
 Page({
 

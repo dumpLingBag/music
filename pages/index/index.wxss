@@ -1,21 +1,104 @@
 /**index.wxss**/
-.userinfo {
+/* @import "./weui.wxss"; */
+
+.index-music{
+  background-color: #fff;
+  padding: 15px;
+}
+.index-search{
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, .05);
+  position: relative;
+}
+.index-input{
+  font-size: 12px;
+  padding-left: 3px;
+  height: 30px;
+}
+.swiper{
+  margin-top: 20px;
+}
+.page-section{
+  width: 100%;
+}
+.page-section_center{
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.page-section:last-child{
+  margin-bottom: 0;
+}
+.page-section-gap{
+  box-sizing: border-box;
+  padding: 0 30rpx;
+}
+.page-section-spacing{
+  box-sizing: border-box;
 }
 
-.userinfo-nickname {
-  color: #aaa;
+.demo-text-1{
+  background-color: #1AAD19;
+  color: #FFFFFF;
+  font-size: 36rpx;
+}
+/* .demo-text-1:before{
+  content: 'A';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+.demo-text-2{
+  background-color: #2782D7;
+  color: #FFFFFF;
+  font-size: 36rpx;
+}
+/* .demo-text-2:before{
+  content: 'B';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+.demo-text-3{
+  background-color: #F1F1F1;
+  color: #353535;
+  font-size: 36rpx;
+}
+/* .demo-text-3:before{
+  content: 'C';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+
+.swiper-item{
+  display: block;
+  height: 100px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
 }
 
-.usermotto {
-  margin-top: 200px;
+/* .swiper-box .wx-swiper-dots.wx-swiper-dots-horizontal{
+     margin-bottom: 2rpx;
 }
+.swiper-box .wx-swiper-dot{
+    width:30rpx;
+    display: inline-flex;
+    height: 8rpx;
+    margin-left: 10rpx;
+    justify-content:space-between;
+}
+.swiper-box .wx-swiper-dot::before{
+    content: '';
+    flex-grow: 1; 
+    background: transparent;
+    border-radius: 2rpx
+}
+.swiper-box .wx-swiper-dot-active::before{
+  flex-grow: 1; 
+  background:transparent;   
+} */

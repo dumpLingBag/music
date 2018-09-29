@@ -1,0 +1,39 @@
+<view class='search'>
+  <view class='index-search'>
+    <i-icon type="search" size="18" style='float:left;line-height:28px;margin-left:10px;' i-class='index-icon' color="#80848f" />
+    <input type='text' class='index-input' bindconfirm='bindconfirm' placeholder='请输入歌曲名、歌手名或者类型...'></input>
+  </view>
+  <view class='guess'>
+    <view class='guess-tit'>
+      <text>猜你想找</text>
+    </view>
+    <view class='guess-list'>
+      <text>煎熬</text>
+      <text>周杰伦</text>
+      <text>我只是一只羊</text>
+    </view>
+  </view>
+  <view class='history'>
+    <view class='guess-tit'>
+      <text>搜索历史</text>
+      <i-icon type="trash" size="16" style='float:right;' bindtap='trash' color="#80848f" />
+    </view>
+    <view class='guess-list'>
+      <text>演员</text>
+      <text>别丢下我不管</text>
+      <text>你就不要想起我</text>
+      <text>不想</text>
+      <text>演员</text>
+      <text>别丢下我不管</text>
+      <text>你就不要想起我</text>
+      <text>不想</text>
+    </view>
+  </view>
+</view>
+<view>
+  <i-modal visible="{{ visible2 }}" bind:ok="handleCloseOk" bind:cancel="handleCloseCl">
+      <view>是否要清空搜索历史</view>
+  </i-modal>
+  <i-message id="message" />
+  <i-toast id="toast" />
+</view>

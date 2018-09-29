@@ -1,0 +1,36 @@
+/* pages/search/search.wxss */
+.search{
+  background-color: #fff;
+  padding: 15px;
+}
+.index-search{
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, .05);
+  position: relative;
+}
+.index-input{
+  font-size: 12px;
+  padding-left: 3px;
+  height: 30px;
+}
+.guess,.history{
+  margin: 8px 0;
+  overflow: hidden;
+}
+.guess-tit{
+  margin-bottom: 8px;
+}
+.guess-tit>text{
+  font-size: 13px;
+  color: #80848f;
+}
+.guess-list>text{
+  background-color: rgba(0,0,0,.03);
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 2px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  display: block;
+  float: left;
+}

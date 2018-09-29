@@ -1,3 +1,17 @@
 {
-  "navigationBarTitleText": "我的"
+  "navigationBarTitleText": "我的",
+  "navigationBarBackgroundColor": "#d33d33",
+  "navigationBarTextStyle": "white",
+  "component": true,
+  "usingComponents": {
+    "i-row": "../../dist/row/index",
+    "i-col": "../../dist/col/index",
+    "i-button": "../../dist/button/index",
+    "i-icon": "../../dist/icon/index",
+    "i-toast": "../../dist/toast/index",
+    "i-modal": "../../dist/modal/index",
+    "i-cell-group": "../../dist/cell-group/index",
+    "i-cell": "../../dist/cell/index",
+    "i-switch": "../../dist/switch/index"
+  }
 }
